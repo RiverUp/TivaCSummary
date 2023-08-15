@@ -1,0 +1,22 @@
+{
+    "files.associations": {
+        "hw_ints.h": "c",
+        "uart.h": "c",
+        "serial.h": "c",
+        "gpio.h": "c",
+        "i2c.h": "c",
+        "main.h": "c",
+        "bluetooth.h": "c",
+        "control.h": "c",
+        "pin_map.h": "c",
+        "openmvtrack.h": "c",
+        "math.h": "c",
+        "stdbool.h": "c",
+        "lights.h": "c",
+        "motor.h": "c",
+        "hw_adc.h": "c",
+        "flag.h": "c",
+        "oled.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}
