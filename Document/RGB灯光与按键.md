@@ -4,7 +4,7 @@ RGB灯光亮灭可以说是相当于编程语言”hello，world“一样基础�
 
 根据资料，RGB灯光由PF1、PF2、PF3控制
 
-![1692111908083](image/RGB灯光/1692111908083.png)
+![1692612041145](image/RGB灯光与按键/1692612041145.png)
 
 当赋予这些引脚高电平，对应的颜色就会亮起；根据不同的占空比，可以实现LED灯亮起各种颜色。（分号后面是我猜的，反正实际用不到）
 
@@ -258,6 +258,43 @@ int key1Pressed(int time)
 
 `if(double_key==1)`后面的语句是看两次摁按键是否超过了双击的时间间隔。时间间隔根据定时器中断中调用函数的参数为50*5ms，超过了就是两次单击。
 
+同时这个时间也是消抖的时间，一次按压按键超过了这个时间才算按上了。
+
 单击返回1，双击返回2。
 
 按键sw2与sw1类似
+
+**然后将对应的flag置位，交给主循环处理**
+
+```c
+while(1)
+{
+// 按键
+		{
+			// key1单击
+			if (Key1SinglePressedFlag)
+			{
+
+				Key1SinglePressedFlag = false;
+			}
+			// key1双击
+			if (Key1DoublePressedFlag)
+			{
+	
+				Key1DoublePressedFlag = false;
+			}
+			// key2单击
+			if (Key2SinglePressedFlag)
+			{
+
+				Key2SinglePressedFlag = false;
+			}
+			// key2双击
+			if (Key2DoublePressedFlag)
+			{
+
+				Key2DoublePressedFlag = false;
+			}
+		}
+}
+```

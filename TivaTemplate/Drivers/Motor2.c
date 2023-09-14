@@ -17,10 +17,10 @@ void initMotor2()
     PWMOutputState(PWM0_BASE, PWM_OUT_7_BIT, true);
     PWMGenEnable(PWM0_BASE, PWM_GEN_3);
 
-    GPIOPinTypeGPIOOutput(GPIO_PORTD_BASE,GPIO_PIN_2|GPIO_PIN_3);
-    GPIOPinTypeGPIOOutput(GPIO_PORTB_BASE,GPIO_PIN_6|GPIO_PIN_7);
-                                                                                                               //    GPIODirModeSet(GPIO_PORTD_BASE,
-                                                                                                               //                   GPIO_PIN_6 | GPIO_PIN_7, GPIO_DIR_MODE_OUT);
+    GPIOPinTypeGPIOOutput(GPIO_PORTD_BASE, GPIO_PIN_2 | GPIO_PIN_3);
+    GPIOPinTypeGPIOOutput(GPIO_PORTB_BASE, GPIO_PIN_6 | GPIO_PIN_7);
+    //    GPIODirModeSet(GPIO_PORTD_BASE,
+    //                   GPIO_PIN_6 | GPIO_PIN_7, GPIO_DIR_MODE_OUT);
 
     GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE, GPIO_PIN_2);
     GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_2, 0);
